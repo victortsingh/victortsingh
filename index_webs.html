@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Victor — Cognitive Science &amp; Prediction Markets</title>
+<meta name="description" content="Victor — Cognitive Science student at the University of Toronto working across econometrics, causal inference, and prediction markets." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="noise-canvas"></canvas>
+
+<nav class="nav">
+  <div class="nav__mark">VS</div>
+  <div class="nav__links">
+    <a href="index.html" class="is-active">About</a>
+    <a href="research.html">Research</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <a class="nav__resume" href="assets/Victor Singh Resume Aug 2026.pdf" target="_blank" rel="noopener">CV ↗</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero__eyebrow">Victor Tarun Singh - University of Toronto</div>
+  <h1 class="hero__title">
+    <span class="line hero__accent" data-noise>Hello!</span>
+  </h1>
+  <p class="hero__sub">
+        My name is Victor Singh I am currently a Cognitive Science and economics student at the University of Toronto,
+        entering my 4th year. My academic interests sit across econometrics, causal inference,
+        cognitive science, and the brain + the body — all different lenses that contribute to the same problem of separating
+        real signal from noise in the complex problem of decision making .
+  </p>
+  <div class="hero__cta">
+    <a href="research.html" class="btn btn--primary">Current Work</a>
+    <a href="contact.html" class="btn btn--ghost">Get in touch</a>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="about">
+    <div class="section__head">
+      <span class="section__num">SEC.01</span>
+      <h2>About</h2>
+    </div>
+    <div class="about__grid">
+      <p class="about__lead">
+       Amongst my research interests, I have a variety of hobbies and interests that I pursue in my free time. For academic hobbies, I enjoy playing bridge, chess, and reading Sci-Fi and Philosophy books centered around the nature of consciousness and the mind. For my creative interests, I love listening to music, going to live shows, and playing guitar. For physical activities, I backcountry backpack, fish, and hike. All in my quest to become the embodiment of a Renaissance man... it's also possible I have too much time on my hands.
+      <div class="photo-carousel" id="about-carousel">
+        <div class="photo-carousel__viewport">
+          <img class="photo-carousel__img" id="carousel-img" src="assets/photos/Victor_S_P2.jpg" alt="Photo 1 of 2" />
+          <button class="photo-carousel__nav photo-carousel__nav--prev" id="carousel-prev" aria-label="Previous photo"></button>
+          <button class="photo-carousel__nav photo-carousel__nav--next" id="carousel-next" aria-label="Next photo"></button>
+        </div>
+        <div class="photo-carousel__dots" id="carousel-dots"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>&copy; <span id="year"></span> Victor T. Singh</span>
+  <span class="footer__mono mono">Duex Ex Machina</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
