@@ -85,6 +85,7 @@ if (carousel) {
     { src: 'assets/photos/Victor_S_Website_p1.jpeg', alt: 'Photo 2' },
     { src: 'assets/photos/Zambia_plane.png', alt: 'Photo 3' },
   ];
+
   
   const img = document.getElementById('carousel-img');
   const dotsWrap = document.getElementById('carousel-dots');
