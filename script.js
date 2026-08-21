@@ -81,10 +81,11 @@ if (carousel) {
   // Edit this list to add/remove/reorder your own photos.
   // Put the image files in assets/photos/ using these filenames (or update the paths below).
   const photos = [
-    { src: 'assets/photos/Victor_S_Website_p1.jpeg', alt: 'Photo 1' },
-    { src: 'assets/photos/Photo_website_3.jpg', alt: 'Photo 2' },
+    { src: 'assets/photos/Giza_photo.jpeg', alt: 'Photo 1' },
+    { src: 'assets/photos/Victor_S_Website_p1.jpeg', alt: 'Photo 2' },
+    { src: 'assets/photos/Zambia_plane.png', alt: 'Photo 3' },
   ];
-
+  
   const img = document.getElementById('carousel-img');
   const dotsWrap = document.getElementById('carousel-dots');
   const prevBtn = document.getElementById('carousel-prev');
