@@ -417,6 +417,21 @@ main {
   color: var(--signal);
   letter-spacing: 0.05em;
 }
+.timeline__link {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--signal) !important;
+  border-bottom: 1px solid var(--signal-dim);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.timeline__link:hover {
+  color: var(--warn) !important;
+  border-color: var(--warn);
+}
 
 .timeline__body h3 {
   font-family: var(--font-display);
