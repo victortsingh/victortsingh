@@ -1,77 +1,6 @@
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Reduced motion check
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-// ============================
-// Noise -> Signal canvas
-// ============================
-const canvas = document.getElementById('noise-canvas');
-const ctx = canvas.getContext('2d');
-let W, H;
-
-function resize() {
-  W = canvas.width = window.innerWidth;
-  H = canvas.height = window.innerHeight;
-}
-resize();
-window.addEventListener('resize', resize);
-
-const COUNT = 160;
-const particles = [];
-
-function sineTarget(i, t) {
-  const x = (i / COUNT) * W;
-  const y = H * 0.5 + Math.sin((x / W) * Math.PI * 2.4 + t) * (H * 0.09);
-  return { x, y };
-}
-
-for (let i = 0; i < COUNT; i++) {
-  particles.push({
-    x: Math.random() * W,
-    y: Math.random() * H,
-    startX: Math.random() * W,
-    startY: Math.random() * H,
-    r: Math.random() * 1.6 + 0.6,
-  });
-}
-
-let progress = 0; // 0 = noise, 1 = signal
-const settleDuration = prefersReducedMotion ? 1 : 2600; // ms
-let startTime = null;
-
-function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
-
-function draw(now) {
-  if (startTime === null) startTime = now;
-  const elapsed = now - startTime;
-  progress = Math.min(1, elapsed / settleDuration);
-  const eased = easeOutCubic(progress);
-
-  ctx.clearRect(0, 0, W, H);
-
-  const t = now / 1800;
-
-  particles.forEach((p, i) => {
-    const target = sineTarget(i, t);
-    const idleJitterX = Math.sin(now / 900 + i) * 2;
-    const idleJitterY = Math.cos(now / 1100 + i) * 2;
-
-    const x = p.startX + (target.x + idleJitterX - p.startX) * eased;
-    const y = p.startY + (target.y + idleJitterY - p.startY) * eased;
-
-    ctx.beginPath();
-    ctx.arc(x, y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(94, 234, 212, ${0.25 + eased * 0.5})`;
-    ctx.fill();
-  });
-
-  requestAnimationFrame(draw);
-}
-
-requestAnimationFrame(draw);
-
 // ============================
 // About page photo carousel
 // ============================
@@ -81,9 +10,9 @@ if (carousel) {
   // Edit this list to add/remove/reorder your own photos.
   // Put the image files in assets/photos/ using these filenames (or update the paths below).
   const photos = [
-    { src: 'assets/photos/Giza_photo.jpeg', alt: 'Photo 1' },
-    { src: 'assets/photos/Victor_S_Website_p1.jpeg', alt: 'Photo 2' },
-    { src: 'assets/photos/Zambia_plane.png', alt: 'Photo 3' },
+    { src: 'assets/photos/Victor_S_Website_p1.jpeg', alt: 'Photo 1' },
+    { src: 'assets/photos/Zambia_plane.png', alt: 'Photo 2' },
+    { src: 'assets/photos/Giza_photo.jpeg', alt: 'Photo 3' },
   ];
 
   

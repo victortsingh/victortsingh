@@ -3,45 +3,43 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contact — Victor</title>
+<title>Contact — Victor Singh</title>
 <meta name="description" content="Get in touch with Victor." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png?v=2" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<canvas id="noise-canvas"></canvas>
-
-<nav class="nav">
-  <div class="nav__mark">VS.</div>
-  <div class="nav__links">
-    <a href="index.html">About</a>
-    <a href="research.html">Research</a>
-    <a href="contact.html" class="is-active">Contact</a>
+<header class="banner">
+  <div class="banner__inner">
+    <nav class="nav">
+      <a href="index.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="contact.html" class="is-active">Contact</a>
+      <a href="assets/Victor_Singh_Resume_PublicPost.pdf" target="_blank" rel="noopener">CV</a>
+      <img class="nav__icon" src="assets/icon.png" alt="" />
+    </nav>
+    <h1 class="banner__title">Contact</h1>
   </div>
-  <a class="nav__resume" href="assets/Victor Singh Resume Aug 2026.pdf" target="_blank" rel="noopener">CV ↗</a>
-</nav>
-
-<header class="page-header">
-  <div class="hero__eyebrow">SEC.05</div>
-  <h1 class="page-header__title">Where to find me</h1>
-  <p class="page-header__sub">Email is the quickest way to find me.</p>
 </header>
 
 <main>
-  <section class="section section--first section--contact" id="contact">
-    <div class="contact__links">
-      <a href="mailto:victor.t.singh@gmail.com">Email</a>
-      <a href="tel:+12024000427" target="_blank" rel="noopener">+1 (202) 400-0427</a>
-      <a href="https://www.linkedin.com/in/victor-singh-b35805344/" target="_blank" rel="noopener">LinkedIn ↗</a>
-    </div>
+  <section class="section section--first" id="contact">
+    <p>Email is the quickest way to find me.</p>
+    <ul class="contact-list">
+      <li><span>Email</span><a href="mailto:victor.t.singh@gmail.com">victor.t.singh@gmail.com</a></li>
+      <li><span>Phone</span><a href="tel:+12024000427">+1 (202) 400-0427</a></li>
+      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/victor-singh-b35805344/" target="_blank" rel="noopener">victor-singh ↗</a></li>
+    </ul>
   </section>
 </main>
 
 <footer class="footer">
   <span>&copy; <span id="year"></span> Victor T. Singh</span>
+  <span>Deus Ex Machina</span>
 </footer>
 
 <script src="script.js"></script>
